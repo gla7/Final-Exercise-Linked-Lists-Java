@@ -200,6 +200,13 @@ public class LinkedList {
 			current = current.getNextNode();
 		}
 		return this;
+		// an alternative clever method is this:
+//		public void deleteNode(Node n) {
+//			if (n != null && n.getNextNode() != null) {
+//				n.setData(n.getNextNode().getData()); // copy the data over to n
+//				n.setNextNode(n.getNextNode().getNextNode()); // next node of n is deleted now
+//			}
+//		}
 	}
 	
 	public Boolean isCircular () {// this algorithm identifies the linkedList as circular, and assumes use of head and tail
